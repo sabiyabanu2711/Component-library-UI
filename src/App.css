@@ -1,0 +1,215 @@
+/* App Layout & Showcase Styling */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem 1.5rem;
+}
+
+/* Header & Hero */
+.app-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.app-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.badge--primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.badge--success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.app-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.app-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Hand-in Summary Banner */
+.handin-banner {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+  border: 1px solid #c7d2fe;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.handin-banner__label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.handin-banner__text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e1b4b;
+  line-height: 1.5;
+}
+
+/* Section styling */
+.showcase-section {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.section-tag {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.showcase-group {
+  margin-bottom: 2rem;
+}
+
+.showcase-group:last-child {
+  margin-bottom: 0;
+}
+
+.group-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Flex rows and grids */
+.elements-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Interactive Feedback Pill */
+.action-feedback {
+  background-color: var(--color-success-light);
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Form inputs for Modal Demo */
+.form-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.875rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border-light);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  .showcase-section {
+    padding: 1.25rem;
+  }
+}
+

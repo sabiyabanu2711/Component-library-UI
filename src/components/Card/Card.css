@@ -1,0 +1,112 @@
+/* Card Base Styles */
+.ui-card {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+/* Card Variants */
+.ui-card--elevated {
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.ui-card--outlined {
+  border: 1px solid var(--border-light);
+  box-shadow: none;
+}
+
+.ui-card--flat {
+  background-color: var(--bg-muted);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* Card Hoverable Effect */
+.ui-card--hoverable {
+  cursor: pointer;
+}
+
+.ui-card--hoverable:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-subtle);
+}
+
+/* Card Paddings */
+.ui-card--padding-none {
+  padding: 0;
+}
+
+.ui-card--padding-sm {
+  padding: 0.875rem;
+}
+
+.ui-card--padding-md {
+  padding: 1.25rem;
+}
+
+.ui-card--padding-lg {
+  padding: 1.75rem;
+}
+
+/* Card Subcomponents */
+.ui-card__cover {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.ui-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ui-card__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ui-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.ui-card__description {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.ui-card__content {
+  flex: 1 1 auto;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.ui-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.ui-card__footer--no-divider {
+  border-top: none;
+  padding-top: 0;
+}
+
